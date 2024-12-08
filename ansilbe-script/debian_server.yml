@@ -1,0 +1,6 @@
+- hosts: homeserver
+  tasks:
+    - name: Update and upgrade packages
+      apt:
+        update_cache: yes
+        upgrade: dist
