@@ -9,4 +9,6 @@ sudo mkdir -p /etc/ansible
 sudo touch /etc/ansible/hosts
 
 git clone https://github.com/uvish/homeserver.git .
+
+ansible-playbook ansible/debian_server.yml
 ```
