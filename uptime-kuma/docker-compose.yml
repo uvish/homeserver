@@ -11,6 +11,8 @@ services:
       - uptime-kuma:/app/data
     environment:
       - UPTIME_KUMA_DISABLE_FRAME_SAMEORIGIN=true
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
 
 volumes:
   uptime-kuma:
