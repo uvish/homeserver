@@ -40,6 +40,12 @@
         name: docker-compose
         state: present
 
+    - name: Create directory for Docker systemd override
+      file:
+        path: /etc/systemd/system/docker.service.d
+        state: directory
+        mode: '0755'
+
     - name: Enable Docker TCP socket on port 2375
       copy:
         dest: /etc/systemd/system/docker.service.d/tcp-2375.conf
