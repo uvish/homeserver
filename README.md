@@ -10,5 +10,5 @@ sudo touch /etc/ansible/hosts
 
 git clone https://github.com/uvish/homeserver.git .
 
-ansible-playbook ansible/debian_server.yml
+ansible-playbook ansible-script/debian_server.yml -i ansible-script/inventory.ini
 ```
