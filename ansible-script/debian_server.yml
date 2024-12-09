@@ -6,6 +6,7 @@
         update_cache: yes
         upgrade: dist
 
+#  DOCKER
     - name: Install required packages
       apt:
         name:
@@ -68,3 +69,18 @@
         name: docker
         state: started
         enabled: yes
+# NODEJS
+    - name: Install Node.js
+      apt:
+        name: nodejs
+        state: present
+
+    - name: Install npm
+      apt:
+        name: npm
+        state: present
+
+    - name: Install PM2
+      npm:
+        name: pm2
+        global: yes 
